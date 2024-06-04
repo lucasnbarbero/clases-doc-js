@@ -34,5 +34,3 @@ En los próximos días, exploraremos cada uno de estos temas brindándoles las h
 ### ¡Recuerden! No están solos en el proceso
 
 Si tienen alguna pregunta, duda o necesitan ayuda en cualquier momento, no duden en contactarme. Estoy aquí para apoyarlos y guiarlos en su camino hacia el dominio de JavaScript.
-
-<h1>¡Allá vamos! 🚀</h1>

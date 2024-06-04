@@ -12,7 +12,7 @@ hero:
       link: /introduction
     - theme: alt
       text: Esquema del curso
-      link: /
+      link: /course-outline
 
 features:
   - title: Para principiantes

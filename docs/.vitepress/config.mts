@@ -16,6 +16,10 @@ export default defineConfig({
         text: "Introducción",
         link: "/introduction",
       },
+      {
+        text: "Esquema del curso",
+        link: "/course-outline",
+      },
     ],
 
     socialLinks: [
