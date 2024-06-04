@@ -37,6 +37,15 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "Fundamentos",
+        items: [
+          {
+            text: "¡Hola, mundo!",
+            link: "/basics/hello-world",
+          },
+        ],
+      },
     ],
 
     socialLinks: [
