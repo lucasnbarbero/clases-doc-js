@@ -27,6 +27,10 @@ export default defineConfig({
             text: "¿Qué es JavaScript?",
             link: "/introduction/javascript",
           },
+          {
+            text: "Editores de código",
+            link: "/introduction/code-editors",
+          },
         ],
       },
     ],
