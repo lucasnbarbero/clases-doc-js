@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: Curso de JavaScript
-  text: "Aprende JavaScript desde cero hasta ES6"
+  text: Aprende JavaScript desde cero hasta ES6
   tagline: Domina los fundamentos y crea aplicaciones web interactivas
   actions:
     - theme: brand
