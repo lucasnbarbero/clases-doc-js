@@ -31,6 +31,10 @@ export default defineConfig({
             text: "Editores de código",
             link: "/introduction/code-editors",
           },
+          {
+            text: "Consola de desarrollador",
+            link: "/introduction/devtools",
+          },
         ],
       },
     ],
