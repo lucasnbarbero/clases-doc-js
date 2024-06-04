@@ -13,12 +13,8 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Introducción",
+        text: "Bienvenidos",
         link: "/introduction",
-      },
-      {
-        text: "Esquema del curso",
-        link: "/course-outline",
       },
       {
         text: "Introducción",
@@ -43,6 +39,10 @@ export default defineConfig({
           {
             text: "¡Hola, mundo!",
             link: "/basics/hello-world",
+          },
+          {
+            text: "Estructura del código",
+            link: "/basics/structure",
           },
         ],
       },
