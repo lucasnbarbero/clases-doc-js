@@ -44,6 +44,10 @@ export default defineConfig({
             text: "Estructura del código",
             link: "/basics/structure",
           },
+          {
+            text: "Variables",
+            link: "/basics/variables",
+          },
         ],
       },
     ],
