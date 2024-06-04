@@ -20,6 +20,15 @@ export default defineConfig({
         text: "Esquema del curso",
         link: "/course-outline",
       },
+      {
+        text: "Introducción",
+        items: [
+          {
+            text: "¿Qué es JavaScript?",
+            link: '/introduction/javascript'
+          },
+        ],
+      },
     ],
 
     socialLinks: [
