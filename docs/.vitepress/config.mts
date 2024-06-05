@@ -69,6 +69,10 @@ export default defineConfig({
             text: "Condicionales",
             link: "/basics/ifelse",
           },
+          {
+            text: "Bucles: while y for",
+            link: "/basics/while-for",
+          },
         ],
       },
       {
@@ -81,6 +85,10 @@ export default defineConfig({
           {
             text: "02 - Condicionales",
             link: "/exercises/02-ifelse",
+          },
+          {
+            text: "02 - Bucles",
+            link: "/exercises/03-while-for",
           },
         ],
       },
