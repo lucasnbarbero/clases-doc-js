@@ -91,7 +91,7 @@ Una función puede devolver un valor al código de llamada como resultado.
 
 El ejemplo más simple sería una función que suma dos valores:
 
-```js
+```js{2}
 function sum(a, b) {
   return a + b;
 }
@@ -104,7 +104,7 @@ La directiva `return` puede estar en cualquier lugar de la función. Cuando la e
 
 Puede haber muchos `return` en una sola función. Por ejemplo:
 
-```js
+```js{3,5}
 function checkAge(age) {
   if (age > 18) {
     return true;
@@ -123,3 +123,18 @@ if (checkAge(age)) {
 ```
 
 Es posible utilizar return sin ningún valor. Eso hace que la función salga o termine inmediatamente.
+
+Por ejemplo:
+
+```js{3}
+function showMovie(age) {
+  if (!checkAge(age)) {
+    return;
+  }
+
+  alert("Mostrándote la película"); // (*)
+  // ...
+}
+```
+
+En el código de arriba, si `checkAge(age)` devuelve `false`, entonces `showMovie` no mostrará la `alert`.
