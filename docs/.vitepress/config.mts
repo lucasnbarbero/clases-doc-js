@@ -63,11 +63,24 @@ export default defineConfig({
         ],
       },
       {
+        text: "Estructuras de control",
+        items: [
+          {
+            text: "Condicionales",
+            link: "/basics/ifelse",
+          },
+        ],
+      },
+      {
         text: "Ejercicios",
         items: [
           {
             text: "01 - Variables",
             link: "/exercises/01-variables",
+          },
+          {
+            text: "02 - Condicionales",
+            link: "/exercises/02-ifelse",
           },
         ],
       },
