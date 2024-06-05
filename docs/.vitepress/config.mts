@@ -52,6 +52,10 @@ export default defineConfig({
             text: "Tipos de datos",
             link: "/basics/types",
           },
+          {
+            text: "Interacción - alert, prompt, confirm",
+            link: "/basics/alert-prompt-confirm",
+          },
         ],
       },
       {
