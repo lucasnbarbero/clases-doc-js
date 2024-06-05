@@ -97,6 +97,15 @@ export default defineConfig({
         ],
       },
       {
+        text: "Manipulación del DOM",
+        items: [
+          {
+            text: "HTML",
+            link: "/dom/html-intro",
+          },
+        ],
+      },
+      {
         text: "Ejercicios",
         items: [
           {
