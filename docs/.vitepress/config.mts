@@ -107,6 +107,14 @@ export default defineConfig({
             text: "CSS",
             link: "/dom/css-intro",
           },
+          {
+            text: "DOM (Document Object Model)",
+            link: "/dom/introduction",
+          },
+          {
+            text: "Manipulación del DOM",
+            link: "/dom/modifying-document",
+          },
         ],
       },
       {
