@@ -84,6 +84,10 @@ export default defineConfig({
                 text: "Expresiones de función",
                 link: "/basics/function-expression",
               },
+              {
+                text: "Funciones flecha (arrow functions)",
+                link: "/basics/function-arrow",
+              },
             ],
           },
         ],
