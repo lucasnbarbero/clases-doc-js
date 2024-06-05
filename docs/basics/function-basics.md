@@ -138,3 +138,9 @@ function showMovie(age) {
 ```
 
 En el código de arriba, si `checkAge(age)` devuelve `false`, entonces `showMovie` no mostrará la `alert`.
+
+## Ejercicio
+
+Pongamos a prueba lo que aprendimos con estos [ejercicios](../exercises/04-functions.md)
+
+

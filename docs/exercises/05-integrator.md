@@ -2,7 +2,7 @@
 
 Vamos a crear un juego de adivinanza en el que el programa elige un número aleatorio entre 1 y 100, y el usuario tiene que adivinar cuál es. El programa dará pistas de si el número es más alto o más bajo que el intento del usuario. El usuario tiene un máximo de 10 intentos para adivinar el número.
 
-### Tiempo estimado de resolución: 15 - 20 minutos.
+### Tiempo estimado de resolución: 25 - 30 minutos.
 
 ## Requisitos
 

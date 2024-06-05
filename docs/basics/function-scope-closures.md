@@ -130,4 +130,4 @@ contador2(); // 2
 
 ## Ejercicio
 
-¡Llegó el gran momento! Vamos a realizar un [ejercicio](../exercises/04-integrator.md) donde pondremos en práctica todo lo aprendido hasta este momento!
+¡Llegó el gran momento! Vamos a realizar un [ejercicio](../exercises/05-integrator.md) donde pondremos en práctica todo lo aprendido hasta este momento!

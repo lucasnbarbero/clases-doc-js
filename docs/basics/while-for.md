@@ -81,4 +81,4 @@ Ambos bucles, permiten ejecutar código repetidamente, pero se utilizan en difer
 
 ## Ejercicio
 
-Resolvamos los siguientes siguiente [ejercicio](../exercises/03-while-for.md)!
+Resolvamos los siguientes [ejercicios](../exercises/03-while-for.md)!

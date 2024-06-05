@@ -97,12 +97,25 @@ export default defineConfig({
         ],
       },
       {
-        text: "Objetos y Arrays",
+        text: "Arrays y objetos",
         items: [
           {
-            text: "Objetos",
-            link: "/object-array/object/introduction",
+            text: "Arrays",
+            items: [
+              {
+                text: "¿Que son?",
+                link: "/object-array/array/introduction",
+              },
+              {
+                text: "Métodos",
+                link: "/object-array/array/methods",
+              },
+            ],
           },
+          // {
+          //   text: "Objetos",
+          //   link: "/object-array/object/introduction",
+          // },
         ],
       },
       // {
@@ -142,8 +155,16 @@ export default defineConfig({
             link: "/exercises/03-while-for",
           },
           {
-            text: "04 - INTEGRADOR",
-            link: "/exercises/04-integrator",
+            text: "04 - Funciones",
+            link: "/exercises/04-functions",
+          },
+          {
+            text: "05 - INTEGRADOR",
+            link: "/exercises/05-integrator",
+          },
+          {
+            text: "06 - Arrays",
+            link: "/exercises/06-arrays",
           },
         ],
       },

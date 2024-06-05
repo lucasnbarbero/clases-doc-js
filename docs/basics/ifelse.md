@@ -83,4 +83,4 @@ alert("Hoy es " + nombreDia);
 
 ## Ejercicio
 
-Pongamos en práctica lo aprendido en esta sección resolviendo el siguiente [ejercicio](../exercises/02-ifelse.md)
+Pongamos en práctica lo aprendido en esta sección resolviendo los siguientes [ejercicios](../exercises/02-ifelse.md)
