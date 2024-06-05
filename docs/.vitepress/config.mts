@@ -108,15 +108,22 @@ export default defineConfig({
             link: "/exercises/02-ifelse",
           },
           {
-            text: "02 - Bucles",
+            text: "03 - Bucles",
             link: "/exercises/03-while-for",
+          },
+          {
+            text: "04 - INTEGRADOR",
+            link: "/exercises/04-integrator",
           },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      {
+        icon: "github",
+        link: "https://github.com/lucasnbarbero/clases-doc-js",
+      },
     ],
   },
 });

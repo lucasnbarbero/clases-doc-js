@@ -127,3 +127,7 @@ const contador2 = crearContador();
 contador2(); // 1
 contador2(); // 2
 ```
+
+## Ejercicio
+
+¡Llegó el gran momento! Vamos a realizar un [ejercicio](../exercises/04-integrator.md) donde pondremos en práctica todo lo aprendido hasta este momento!
