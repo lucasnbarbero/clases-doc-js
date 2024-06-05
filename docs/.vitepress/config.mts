@@ -48,6 +48,10 @@ export default defineConfig({
             text: "Variables",
             link: "/basics/variables",
           },
+          {
+            text: "Tipos de datos",
+            link: "/basics/types",
+          },
         ],
       },
       {
