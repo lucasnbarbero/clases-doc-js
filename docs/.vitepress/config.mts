@@ -80,6 +80,10 @@ export default defineConfig({
                 text: "Declaracion y ejecución de funciones",
                 link: "/basics/function-basics",
               },
+              {
+                text: "Expresiones de función",
+                link: "/basics/function-expression",
+              },
             ],
           },
         ],
