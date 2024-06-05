@@ -87,3 +87,20 @@ var 1a; // no puede iniciar con un dígito
 
 var my-name;  // los guiones '-' no son permitidos en nombres de variables
 ```
+
+## Constantes
+
+Para declarar una variable constante (inmutable) use `const` en vez de `var`:
+
+```js
+const myBirthday = "09.01.1995";
+```
+
+Las variables declaradas utilizando const se llaman “constantes”. No pueden ser alteradas. Al intentarlo causaría un error:
+
+```js
+const myBirthday = "09.01.1995";
+
+myBirthday = "01.01.2001"; // ¡error, no se puede reasignar la constante!
+```
+
