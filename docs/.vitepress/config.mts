@@ -60,18 +60,27 @@ export default defineConfig({
             text: "Operadores y expresiones",
             link: "/basics/operators",
           },
-        ],
-      },
-      {
-        text: "Estructuras de control",
-        items: [
           {
-            text: "Condicionales",
-            link: "/basics/ifelse",
+            text: "Estructuras de control",
+            items: [
+              {
+                text: "Condicionales",
+                link: "/basics/ifelse",
+              },
+              {
+                text: "Bucles: while y for",
+                link: "/basics/while-for",
+              },
+            ],
           },
           {
-            text: "Bucles: while y for",
-            link: "/basics/while-for",
+            text: "Funciones",
+            items: [
+              {
+                text: "Declaracion y ejecución de funciones",
+                link: "/basics/function-basics",
+              },
+            ],
           },
         ],
       },
