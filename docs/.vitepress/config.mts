@@ -50,6 +50,15 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "Ejercicios",
+        items: [
+          {
+            text: "01 - Variables",
+            link: "/exercises/01-variables",
+          },
+        ],
+      },
     ],
 
     socialLinks: [
