@@ -81,3 +81,5 @@ paragraphToRemove.remove();
 ## Ejercicio guiado
 
 Vamos a realizar un ejercicio práctico para poner en práctica y profundizar en la manipulación del DOM.
+
+### [¡Allá vamos!](../exercises/05-modifying-dom.md) 🚀

@@ -97,26 +97,35 @@ export default defineConfig({
         ],
       },
       {
-        text: "Manipulación del DOM",
+        text: "Objetos y Arrays",
         items: [
           {
-            text: "HTML",
-            link: "/dom/html-intro",
-          },
-          {
-            text: "CSS",
-            link: "/dom/css-intro",
-          },
-          {
-            text: "DOM (Document Object Model)",
-            link: "/dom/introduction",
-          },
-          {
-            text: "Manipulación del DOM",
-            link: "/dom/modifying-document",
+            text: "Objetos",
+            link: "/object-array/object/introduction",
           },
         ],
       },
+      // {
+      //   text: "Manipulación del DOM",
+      //   items: [
+      //     {
+      //       text: "HTML",
+      //       link: "/dom/html-intro",
+      //     },
+      //     {
+      //       text: "CSS",
+      //       link: "/dom/css-intro",
+      //     },
+      //     {
+      //       text: "DOM (Document Object Model)",
+      //       link: "/dom/introduction",
+      //     },
+      //     {
+      //       text: "Manipulación del DOM",
+      //       link: "/dom/modifying-document",
+      //     },
+      //   ],
+      // },
       {
         text: "Ejercicios",
         items: [
