@@ -88,6 +88,10 @@ export default defineConfig({
                 text: "Funciones flecha (arrow functions)",
                 link: "/basics/function-arrow",
               },
+              {
+                text: "Scope y Closures",
+                link: "/basics/function-scope-closures",
+              },
             ],
           },
         ],
