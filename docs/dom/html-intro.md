@@ -98,9 +98,11 @@ Los eventos en HTML permiten a los desarrolladores web ejecutar código JavaScri
 ```
 
 :::tip
-Para conocer más sobre **HTML**, te recomiendo que investigues la documentación oficial
+Para conocer más sobre **HTML**, te invito que investigues la documentación oficial:
 
 [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+
 [Atributos](https://developer.mozilla.org/es/docs/Web/HTML/Attributes)
+
 [Eventos](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
 :::

@@ -103,6 +103,10 @@ export default defineConfig({
             text: "HTML",
             link: "/dom/html-intro",
           },
+          {
+            text: "CSS",
+            link: "/dom/css-intro",
+          },
         ],
       },
       {
