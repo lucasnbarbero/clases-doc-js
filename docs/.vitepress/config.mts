@@ -56,6 +56,10 @@ export default defineConfig({
             text: "Interacción - alert, prompt, confirm",
             link: "/basics/alert-prompt-confirm",
           },
+          {
+            text: "Operadores y expresiones",
+            link: "/basics/operators",
+          },
         ],
       },
       {
