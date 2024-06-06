@@ -112,6 +112,19 @@ export default defineConfig({
               },
             ],
           },
+          {
+            text: 'Objetos',
+            items: [
+              {
+                text: "¿Que son?",
+                link: '/object-array/object/introduction'
+              },
+              {
+                text: 'Referencias y copias',
+                link: '/object-array/object/references'
+              }
+            ]
+          }
           // {
           //   text: "Objetos",
           //   link: "/object-array/object/introduction",

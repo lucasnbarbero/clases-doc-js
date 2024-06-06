@@ -1,159 +1,258 @@
 # Objetos
 
-En JavaScript, un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor. Los objetos pueden contener cualquier tipo de datos, incluyendo otros objetos. En pocas palabras, los objetos en JavaScript son entidades con propiedades que definen sus características y métodos que definen sus comportamientos.
+Como aprendimos en el capítulo [Tipos de datos](../../basics/types.md), hay ocho tipos de datos en JavaScript. Siete de ellos se denominan “primitivos”, porque sus valores contienen solo un dato (sea un `string`, un número o lo que sea).
 
-Los objetos son uno de los tipos de datos más fundamentales en JavaScript y se utilizan para representar entidades del mundo real con características y comportamientos.
+En contraste, los objetos son usados para almacenar colecciones de varios datos y entidades más complejas asociados con un nombre clave. En JavaScript, los objetos penetran casi todos los aspectos del lenguaje. Por lo tanto, debemos comprenderlos primero antes de profundizar en cualquier otro lugar.
 
-## Creación de objetos
+Podemos crear un objeto usando las llaves `{…}` con una lista opcional de _propiedades_. Una propiedad es un par “key:value”, donde `key` es un string, y `value` puede ser cualquier cosa.
 
-Hay varias formas de crear objetos en JavaScript, pero las dos más comunes son mediante el uso de **literales de objeto** y **constructores de objetos**.
-
-### Literales de objeto
-
-Un literal de objeto es la forma más sencilla y directa de crear un objeto. Se define utilizando llaves `{}` y especificando las propiedades dentro de las llaves.
+Se puede crear un objeto vacio utilizando estas dos sintaxis:
 
 ```js
-// Creación de un objeto utilizando un literal de objeto
-const persona = {
-  nombre: "Lucas",
-  edad: 30,
-  profesion: "Desarrollador",
-};
-
-console.log(persona); // { nombre: 'Lucas', edad: 30, profesion: 'Desarrollador' }
+let user = new Object(); // sintaxis de "constructor de objetos"
+let user = {}; // sintaxis de "objeto literal"
 ```
 
-Hemos creado un objeto `persona` con tres propiedades: `nombre`, `edad` y `profesion`.
+Normalmente se utilizan las llaves {...}. Esa declaración se llama objeto literal.
 
-### Constructores de Objetos
+## Literales y objetos
 
-Otra forma de crear objetos es utilizando una función constructora. Una función constructora es una función que se utiliza con el operador `new` para crear instancias de un objeto.
+Podemos poner inmediatamente algunas propiedades dentro de `{...}` como pares “clave:valor”:
 
 ```js
-// Definición de una función constructora
-function Persona(nombre, edad, profesion) {
-  this.nombre = nombre;
-  this.edad = edad;
-  this.profesion = profesion;
+let user = {
+  // un objeto
+  name: "John", // En la clave "name" se almacena el valor "John"
+  age: 30, // En la clave "age" se almacena el valor 30
+};
+```
+
+Una propiedad tiene una clave (también conocida como “nombre” o “identificador”) antes de los dos puntos ":" y un valor a la derecha.
+
+En el objeto user hay dos propiedades:
+
+La primera propiedad tiene la clave "name" y el valor "John".
+La segunda tienen la clave "age" y el valor 30.
+
+Podemos agregar, eliminar y leer archivos de él en cualquier momento.
+
+Se puede acceder a los valores de las propiedades utilizando la notación de punto:
+
+```js
+// Obteniendo los valores de las propiedades del objeto:
+alert(user.name); // John
+alert(user.age); // 30
+```
+
+El valor puede ser de cualquier tipo. Agreguemos uno booleano:
+
+```js
+user.isAdmin = true;
+```
+
+Para eliminar una propiedad podemos usar el operador delete:
+
+```js
+delete user.age;
+```
+
+También podemos nombrar propiedades con más de una palabra. Pero, de ser así, debemos colocar la clave entre comillas `"..."`:
+
+```js
+let user = {
+  name: "John",
+  age: 30,
+  "likes birds": true, // Las claves con más de una palabra deben ir entre comillas
+};
+```
+
+## Corchetes
+
+La notación de punto no funciona para acceder a propiedades con claves de más de una palabra:
+
+```js
+// Esto nos daría un error de sintaxis
+user.likes birds = true
+```
+
+JavaScript no entiende eso. Piensa que hemos accedido a user.likes y entonces nos da un error de sintaxis cuando aparece el inesperado birds.
+
+El punto requiere que la clave sea un identificador de variable válido. Eso implica que: no contenga espacios, no comience con un dígito y no incluya caracteres especiales ($ y \_ sí se permiten).
+
+Existe una “notación de corchetes” alternativa que funciona con cualquier string:
+
+```js
+let user = {};
+
+// asignando
+user["likes birds"] = true;
+
+// obteniendo
+alert(user["likes birds"]); // true
+
+// eliminando
+delete user["likes birds"];
+```
+
+Los corchetes también brindan una forma de obtener el nombre de la propiedad desde el resultado de una expresión (a diferencia de la cadena literal). Por ejemplo, a través de una variable:
+
+```js
+let key = "likes birds";
+
+// Tal cual: user["likes birds"] = true;
+user[key] = true;
+```
+
+Aquí la variable key puede calcularse en tiempo de ejecución o depender de la entrada del usuario y luego lo usamos para acceder a la propiedad. Eso nos da mucha flexibilidad.
+
+Por ejemplo:
+
+```js
+let user = {
+  name: "John",
+  age: 30,
+};
+
+let key = prompt("¿Qué te gustaría saber acerca del usuario?", "name");
+
+// acceso por medio de una variable
+alert(user[key]); // John (si se ingresara "name")
+```
+
+La notación de punto no puede ser usada de manera similar:
+
+```js
+let user = {
+  name: "John",
+  age: 30,
+};
+
+let key = "name";
+alert(user.key); // undefined
+```
+
+## Atajos para valores de propiedad
+
+En el código real, a menudo usamos variables existentes como valores de los nombres de propiedades.
+
+Por ejemplo:
+
+```js
+function makeUser(name, age) {
+  return {
+    name: name,
+    age: age,
+    // ...otras propiedades
+  };
 }
 
-// Creación de un objeto utilizando una función constructora
-const persona1 = new Persona("Lucas", 30, "Desarrollador");
-const persona2 = new Persona("María", 25, "Diseñadora");
-
-console.log(persona1); // Persona { nombre: 'Lucas', edad: 30, profesion: 'Desarrollador' }
-console.log(persona2); // Persona { nombre: 'María', edad: 25, profesion: 'Diseñadora' }
+let user = makeUser("John", 30);
+alert(user.name); // John
 ```
 
-En el ejemplo anterior, la función `Persona` actúa como una plantilla para crear nuevos objetos `persona` con las propiedades `nombre`, `edad` y `profesion`.
+En el ejemplo anterior las propiedades tienen los mismos nombres que las variables. El uso de variables para la creación de propiedades es tán común que existe un atajo para valores de propiedad especial para hacerla más corta.
 
-## Propiedades y Métodos
-
-Las propiedades de un objeto son los datos asociados al objeto, mientras que los métodos son funciones que operan sobre estos datos. Podemos acceder a las propiedades y métodos de un objeto utilizando la notación de punto (`.`) o la notación de corchetes (`[]`).
+En lugar de `name:name`, simplemente podemos escribir `name`, tal cual:
 
 ```js
-const coche = {
-  marca: "Toyota",
-  modelo: "Corolla",
-  anio: 2021,
-  arrancar: function () {
-    console.log("El coche ha arrancado");
-  },
-};
-
-// Acceder a propiedades utilizando la notación de punto
-console.log(coche.marca); // Toyota
-console.log(coche["modelo"]); // Corolla
-
-// Llamar a un método
-coche.arrancar(); // El coche ha arrancado
-```
-
-### Modificación de Propiedades
-
-Podemos modificar las propiedades de un objeto en cualquier momento asignándoles nuevos valores.
-
-```js
-coche.año = 2022;
-console.log(coche.año); // 2022
-```
-
-### Añadir y eliminar propiedades
-
-Podemos añadir nuevas propiedades a un objeto o eliminar propiedades existentes utilizando las siguientes técnicas:
-
-```js
-// Añadir una nueva propiedad
-coche.color = "Rojo";
-console.log(coche.color); // Rojo
-
-// Eliminar una propiedad
-delete coche.color;
-console.log(coche.color); // undefined
-```
-
-## Uso de `this`
-
-Dentro de un método, la palabra clave `this` se refiere al objeto que contiene el método. Esto es útil para acceder a otras propiedades del mismo objeto.
-
-```js
-const libro = {
-  titulo: "El Principito",
-  autor: "Antoine de Saint-Exupéry",
-  descripcion: function () {
-    return `${this.titulo} es un libro escrito por ${this.autor}.`;
-  },
-};
-
-console.log(libro.descripcion()); // El Principito es un libro escrito por Antoine de Saint-Exupéry.
-```
-
-## Iteración sobre propiedades
-
-Podemos iterar sobre las propiedades de un objeto utilizando el bucle `for...in`.
-
-```js
-const estudiante = {
-  nombre: "Ana",
-  edad: 22,
-  carrera: "Ingeniería",
-};
-
-for (let clave in estudiante) {
-  console.log(`${clave}: ${estudiante[clave]}`);
+function makeUser(name, age) {
+  return {
+    name, // igual que name:name
+    age, // igual que age:age
+    // ...
+  };
 }
-// nombre: Ana
-// edad: 22
-// carrera: Ingeniería
 ```
 
-## Métodos útiles de Object
-
-JavaScript proporciona varios métodos incorporados para trabajar con objetos de manera más efectiva.
-
-### Object.keys()
-
-Devuelve un array con los nombres de las propiedades enumerables de un objeto.
+Podemos usar ambos tipos de notación en un mismo objeto, la normal y el atajo:
 
 ```js
-const keys = Object.keys(persona);
-console.log(keys); // ["nombre", "edad", "nacionalidad"]
+let user = {
+  name, // igual que name:name
+  age: 30,
+};
 ```
 
-### Object.values()
+## Limitaciones de nombres de propiedad
 
-Devuelve un array con los valores de las propiedades enumerables de un objeto.
+Como sabemos, una variable no puede tener un nombre igual a una de las palabras reservadas del lenguaje, como `for`, `let`, `return`, etc.
+
+Pero para una propiedad de objeto no existe tal restricción:
 
 ```js
-const values = Object.values(persona);
-console.log(values); // ["Lucas", 30, "Argentina"]
+// Estas propiedades están bien
+let obj = {
+  for: 1,
+  let: 2,
+  return: 3,
+};
+
+alert(obj.for + obj.let + obj.return); // 6
 ```
 
-### Object.entries()
+En resumen, no hay limitaciones en los nombres de propiedades. Pueden ser cadenas o símbolos (un tipo especial para identificadores que se cubrirán más adelante).
 
-Devuelve un array de arrays, donde cada subarray contiene un par clave-valor de las propiedades enumerables de un objeto.
+Otros tipos se convierten automáticamente en cadenas.
+
+Por ejemplo, un número 0 se convierte en cadena "0" cuando se usa como clave de propiedad:
 
 ```js
-const entries = Object.entries(persona);
-console.log(entries); // [["nombre", "Lucas"], ["edad", 30], ["nacionalidad", "Argentina"]]
+let obj = {
+  0: "test", // igual que "0": "test"
+};
+
+// ambos alerts acceden a la misma propiedad (el número 0 se convierte a una cadena "0")
+alert(obj["0"]); // test
+alert(obj[0]); // test (la misma propiedad)
 ```
+
+## Bucle `for...in`
+
+Para recorrer todas las claves de un objeto existe una forma especial de bucle: `for..in`.
+
+Sintaxis:
+
+```js
+for (key in object) {
+  // se ejecuta el cuerpo para cada clave entre las propiedades del objeto
+}
+```
+
+Por ejemplo, mostremos todas las propiedades de user:
+
+```js
+let user = {
+  name: "John",
+  age: 30,
+  isAdmin: true,
+};
+
+for (let key in user) {
+  // claves
+  alert(key); // name, age, isAdmin
+  // valores de las claves
+  alert(user[key]); // John, 30, true
+}
+```
+
+Nota que todas las construcciones “for” nos permiten declarar variables para bucle dentro del bucle, como `let key` aquí.
+
+## Resumen
+
+Los objetos son arreglos asociativos con varias características especiales.
+
+Almacenan propiedades (pares de clave-valor), donde:
+
+- Las claves de propiedad deben ser cadenas o símbolos (generalmente strings).
+- Los valores pueden ser de cualquier tipo.
+
+Para acceder a una propiedad, podemos usar:
+
+- La notación de punto: `obj.property`.
+- La notación de corchetes `obj["property"]`. Los corchetes permiten tomar la clave de una variable, como `obj[varWithKey]`.
+
+Operadores adicionales:
+
+- Para eliminar una propiedad: `delete obj.prop`.
+- Para comprobar si existe una propiedad con la clave proporcionada: `"key" in obj`.
+- Para crear bucles sobre un objeto: bucle `for (let key in obj)`.
