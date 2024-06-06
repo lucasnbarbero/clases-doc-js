@@ -256,3 +256,53 @@ Operadores adicionales:
 - Para eliminar una propiedad: `delete obj.prop`.
 - Para comprobar si existe una propiedad con la clave proporcionada: `"key" in obj`.
 - Para crear bucles sobre un objeto: bucle `for (let key in obj)`.
+
+## Ejercicios
+
+### Primer objeto
+
+Escribe el código, una línea para cada acción:
+
+- Crea un objeto `user` vacío.
+- Agrega la propiedad `name` con el valor `John`.
+- Agrega la propiedad `surname` con el valor `Smith`.
+- Cambia el valor de `name` a `Pete`.
+- Remueve la propiedad `name` del objeto.
+
+### Suma de propiedades de un objeto
+
+Tenemos un objeto que almacena los salarios de nuestro equipo:
+
+```js
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+```
+
+Escribe el código para sumar todos los salarios y almacenar el resultado en la variable `sum`. En el ejemplo de arriba nos debería dar `390`.
+
+### Multiplicar propiedades numéricas por 2
+
+Crea una función `multiplyNumeric(obj)` que multiplique todas las propiedades numéricas de `obj` por `2`.
+
+Por ejemplo:
+
+```js
+// Antes de la llamada
+let menu = {
+  width: 200,
+  height: 300,
+  title: "Mi menú",
+};
+
+multiplyNumeric(menu);
+
+// Después de la llamada
+menu = {
+  width: 400,
+  height: 600,
+  title: "Mi menú",
+};
+```
