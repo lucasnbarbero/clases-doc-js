@@ -1,27 +1,33 @@
-# Introduccion al DOM (Document Objecto Model)
+# DOM
 
-El Document Object Model, comúnmente abreviado como DOM, es una interfaz de programación de aplicaciones (API) para documentos HTML y [XML](https://es.wikipedia.org/wiki/Extensible_Markup_Language). Esencialmente, el DOM representa la estructura de un documento web como un árbol de nodos, donde cada nodo representa un elemento del documento, como una etiqueta HTML, un atributo o un fragmento de texto.
+Cuando comenzamos en el mundo del **desarrollo web**, normalmente comenzamos por aprender a escribir etiquetado o marcado HTML y además, añadir estilos CSS para darle color, forma y algo de interacción. Sin embargo, a medida que avanzamos, nos damos cuenta que en cierta forma podemos estar bastante limitados.
 
-El DOM representa todo el contenido de la página como objetos que pueden ser modificados.
+Si únicamente utilizamos HTML/CSS, sólo podremos crear páginas «estáticas», es decir, páginas que no pueden mostrarse de una forma diferente dependiendo de acciones del usuario. Si añadimos Javascript, podremos crear páginas «dinámicas», es decir, aprovechar la potencia y flexibilidad que nos da un lenguaje de programación para crear documentos y páginas mucho más ricas, con una experiencia más completa y con las que se pueden automatizar un gran abanico de tareas y acciones.
 
-El objeto document es el punto de entrada a la página. Con él podemos cambiar o crear cualquier cosa en la página.
+## ¿Qué es el DOM?
 
-Por ejemplo:
+Las siglas **DOM** significan **Document Object Model**, o lo que es lo mismo, la estructura del documento HTML. Una página HTML está formada por múltiples etiquetas HTML, anidadas una dentro de otra, formando un árbol de etiquetas relacionadas entre sí.
 
-```js
-// cambiar el color de fondo a rojo
-document.body.style.background = "red";
+En Javascript, cuando nos referimos al DOM nos referimos a esta estructura de árbol, mediante la cuál podemos acceder a ella y modificar los elementos del HTML desde Javascript, añadiendo nuevas etiquetas, modificando o eliminando otras, cambiando sus atributos HTML, añadiendo clases, cambiando el contenido de texto, etc...
 
-// deshacer el cambio después de 1 segundo
-setTimeout(() => (document.body.style.background = ""), 1000);
-```
+## El objeto `document`
 
-Aquí usamos `document.body.style`, pero hay muchos, muchos más. Las propiedades y métodos se describen en la especificación: [DOM Living Standard](https://dom.spec.whatwg.org/).
+En Javascript, la forma de acceder al DOM es a través de un objeto llamado document, que representa el árbol DOM de la página o, más concretamente, la página de la pestaña del navegador donde nos encontramos. En su interior pueden existir varios tipos de elementos, pero principalmente serán **Element (Elemento)** o **Node (Nodo)**:
 
-## Importancia del DOM
+- _**Element**_ no es más que la representación genérica de una etiqueta: `HTMLElement`.
+- _**Node**_ es una unidad más básica, la cuál puede ser o un nodo de texto.
 
-El DOM es fundamental en el desarrollo web moderno porque proporciona una forma estándar y consistente de representar y manipular documentos web. Permite a los desarrolladores crear aplicaciones web dinámicas e interactivas que respondan a las acciones del usuario y cambien su estado en tiempo real.
+Todos los elementos HTML, dependiendo del elemento que sean, tendrán un tipo de dato específico. Algunos ejemplos:
 
-## Resumen
+| Tipo de dato genérico | Tipo específico  | Etiqueta  | Descripción                    | + info             |
+| --------------------- | ---------------- | --------- | ------------------------------ | ------------------ |
+| HTMLElement           | HTMLDivElement   | `<div>`   | Etiqueta divisoria (en bloque) | Elemento `<div>`   |
+| HTMLElement           | HTMLSpanElement  | `<span>`  | Etiqueta divisoria (en línea)  | Elemento `<span>`  |
+| HTMLElement           | HTMLImageElement | `<img>`   | Imagen                         | Elemento `<img>`   |
+| HTMLElement           | HTMLAudioElement | `<audio>` | Contenedor de audio            | Elemento `<audio>` |
 
-Document Object Model (DOM) es una representación estructurada de un documento HTML/XML que permite acceder y manipular los elementos de la página mediante JavaScript. Es una parte fundamental del desarrollo web moderno y es utilizado en una amplia variedad de aplicaciones y tecnologías web.
+Obviamente, existen muchos tipos de datos específicos, uno por cada etiqueta HTML.
+
+## API nativa de JavaScript
+
+La API nativa del DOM en JavaScript es un conjunto de interfaces y métodos que permiten a los programas JavaScript interactuar con la estructura de un documento HTML o XML. Básicamente, proporciona una forma de acceder y manipular los elementos de una página web de manera dinámica, lo que permite crear experiencias interactivas para el usuario.

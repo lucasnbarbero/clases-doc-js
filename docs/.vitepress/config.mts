@@ -143,6 +143,10 @@ export default defineConfig({
         text: "POO",
         items: [
           {
+            text: "Introducción",
+            link: "/poo/introduction",
+          },
+          {
             text: "Clases",
             link: "/poo/class",
           },
@@ -153,6 +157,15 @@ export default defineConfig({
           {
             text: "Propiedades y metodos estáticos",
             link: "/poo/static-properties-methods",
+          },
+        ],
+      },
+      {
+        text: "DOM",
+        items: [
+          {
+            text: "Introducción",
+            link: "/dom/introduction",
           },
         ],
       },
