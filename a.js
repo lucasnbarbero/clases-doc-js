@@ -1,18 +1,19 @@
-class Person {
-  _name = "Lucas";
+let miPromesa = new Promise((resolve, reject) => {
+  // Simular una operación asíncrona
+  setTimeout(() => {
+    let exito = false;
+    if (exito) {
+      resolve("¡Operación exitosa!");
+    } else {
+      reject(new Error("¡Algo salió mal!"));
+    }
+  }, 2000);
+});
 
-  constructor(name) {
-    this._name = name;
-  }
+const ejecutar = async () => {
+  await miPromesa
+    .then((response) => console.log(response))
+    .catch((err) => console.log(err));
+};
 
-  get() {
-    return this._name;
-  }
-
-  set(nombre) {
-    this._name = nombre;
-  }
-}
-
-const persona = new Person("Lucas 2");
-console.log(persona._name);
+ejecutar();

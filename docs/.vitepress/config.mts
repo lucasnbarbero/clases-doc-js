@@ -165,6 +165,15 @@ export default defineConfig({
         link: "/errors/errors",
       },
       {
+        text: "Promesas - async/await",
+        items: [
+          {
+            text: "Promesas",
+            link: "/promises-async-await/promises",
+          },
+        ],
+      },
+      {
         text: "DOM",
         items: [
           {
