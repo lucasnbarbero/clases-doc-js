@@ -143,3 +143,5 @@ alert(clone.age); // 30
 ```
 
 Aquí, copia todas las propiedades de user en un objeto vacío y lo devuelve.
+
+También hay otras formas de clonar un objeto, por ejemplo usando la sintaxis spread `clone = {...user}`

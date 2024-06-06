@@ -113,45 +113,24 @@ export default defineConfig({
             ],
           },
           {
-            text: 'Objetos',
+            text: "Objetos",
             items: [
               {
                 text: "¿Que son?",
-                link: '/object-array/object/introduction'
+                link: "/object-array/object/introduction",
               },
               {
-                text: 'Referencias y copias',
-                link: '/object-array/object/references'
-              }
-            ]
-          }
-          // {
-          //   text: "Objetos",
-          //   link: "/object-array/object/introduction",
-          // },
+                text: "Referencias y copias",
+                link: "/object-array/object/references",
+              },
+              {
+                text: "Metodos del objeto",
+                link: "/object-array/object/this",
+              },
+            ],
+          },
         ],
       },
-      // {
-      //   text: "Manipulación del DOM",
-      //   items: [
-      //     {
-      //       text: "HTML",
-      //       link: "/dom/html-intro",
-      //     },
-      //     {
-      //       text: "CSS",
-      //       link: "/dom/css-intro",
-      //     },
-      //     {
-      //       text: "DOM (Document Object Model)",
-      //       link: "/dom/introduction",
-      //     },
-      //     {
-      //       text: "Manipulación del DOM",
-      //       link: "/dom/modifying-document",
-      //     },
-      //   ],
-      // },
       {
         text: "Ejercicios",
         items: [
