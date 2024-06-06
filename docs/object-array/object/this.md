@@ -128,6 +128,26 @@ admin.sayHi(); // TypeError: No se puede leer la propiedad 'name' de null
 
 Si usamos `this.name` en vez de `user.name` dentro de `alert`, entonces el código funciona.
 
+## Las funciones de flecha no tienen `this`
+
+Las funciones de flecha son especiales: ellas no tienen su “propio” `this`. Si nosotros hacemos referencia a `this` desde tales funciones, esta será tomada desde afuera de la función “normal”.
+
+Por ejemplo, aquí `arrow()` usa `this` desde fuera del método `user.sayHi()`:
+
+```js
+let user = {
+  firstName: "Lucas",
+  sayHi() {
+    let arrow = () => alert(this.firstName);
+    arrow();
+  },
+};
+
+user.sayHi(); // Lucas
+```
+
+Esto es una característica especial de las funciones de flecha, útil cuando no queremos realmente un `this` separado sino tomarlo de un contexto externo.
+
 ## Ejercicio
 
 #### Crea una calculadora
