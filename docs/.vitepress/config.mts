@@ -127,6 +127,14 @@ export default defineConfig({
                 text: "Metodos del objeto",
                 link: "/object-array/object/this",
               },
+              {
+                text: "Constructor, operador new",
+                link: "/object-array/object/constructor-new",
+              },
+              {
+                text: "Encadenamiento opcional",
+                link: "/object-array/object/optional-chaining",
+              },
             ],
           },
         ],
