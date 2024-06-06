@@ -140,11 +140,19 @@ export default defineConfig({
         ],
       },
       {
-        text: "Clases",
+        text: "POO",
         items: [
           {
-            text: "Sintaxis",
-            link: "/class/introduction",
+            text: "Clases",
+            link: "/poo/class",
+          },
+          {
+            text: "Herencia de clases",
+            link: "/poo/class-inheritance",
+          },
+          {
+            text: "Propiedades y metodos estáticos",
+            link: "/poo/static-properties-methods",
           },
         ],
       },
