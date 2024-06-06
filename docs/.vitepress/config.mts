@@ -161,6 +161,10 @@ export default defineConfig({
         ],
       },
       {
+        text: "Manejo de errores",
+        link: "/errors/errors",
+      },
+      {
         text: "DOM",
         items: [
           {
