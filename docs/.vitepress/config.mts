@@ -140,6 +140,15 @@ export default defineConfig({
         ],
       },
       {
+        text: "Clases",
+        items: [
+          {
+            text: "Sintaxis",
+            link: "/class/introduction",
+          },
+        ],
+      },
+      {
         text: "Ejercicios",
         items: [
           {
