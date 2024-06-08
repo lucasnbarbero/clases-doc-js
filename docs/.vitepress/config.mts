@@ -171,7 +171,40 @@ export default defineConfig({
             text: "Promesas",
             link: "/promises-async-await/promises",
           },
+          {
+            text: 'Async/Await',
+            link: '/promises-async-await/async-await'
+          },
+          {
+            text: 'Fetch',
+            link: '/promises-async-await/fetch'
+          }
         ],
+      },
+      {
+        text: 'ECMAScript6',
+        items: [
+          {
+            text: 'Que es ECMAScript',
+            link: '/es6/introduction'
+          },
+          {
+            text: 'La gran version 6',
+            link: '/es6/principal-news'
+          },
+          {
+            text: 'Desestructuracion',
+            link: '/es6/destructuring'
+          },
+          {
+            text: 'Spread y rest operators',
+            link: '/es6/spread-rest'
+          },
+          {
+            text: 'Modulos',
+            link: '/es6/modules'
+          }
+        ]
       },
       {
         text: "DOM",
