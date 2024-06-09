@@ -8,6 +8,8 @@ Si únicamente utilizamos HTML/CSS, sólo podremos crear páginas «estáticas»
 
 Las siglas **DOM** significan **Document Object Model**, o lo que es lo mismo, la estructura del documento HTML. Una página HTML está formada por múltiples etiquetas HTML, anidadas una dentro de otra, formando un árbol de etiquetas relacionadas entre sí.
 
+![arbol_html](https://lenguajejs.com/javascript/dom/que-es/que-es-dom.png)
+
 En Javascript, cuando nos referimos al DOM nos referimos a esta estructura de árbol, mediante la cuál podemos acceder a ella y modificar los elementos del HTML desde Javascript, añadiendo nuevas etiquetas, modificando o eliminando otras, cambiando sus atributos HTML, añadiendo clases, cambiando el contenido de texto, etc...
 
 ## El objeto `document`

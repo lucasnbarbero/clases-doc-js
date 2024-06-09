@@ -172,39 +172,39 @@ export default defineConfig({
             link: "/promises-async-await/promises",
           },
           {
-            text: 'Async/Await',
-            link: '/promises-async-await/async-await'
+            text: "Async/Await",
+            link: "/promises-async-await/async-await",
           },
           {
-            text: 'Fetch',
-            link: '/promises-async-await/fetch'
-          }
+            text: "Fetch",
+            link: "/promises-async-await/fetch",
+          },
         ],
       },
       {
-        text: 'ECMAScript6',
+        text: "ECMAScript6",
         items: [
           {
-            text: 'Que es ECMAScript',
-            link: '/es6/introduction'
+            text: "Que es ECMAScript",
+            link: "/es6/introduction",
           },
           {
-            text: 'La gran version 6',
-            link: '/es6/principal-news'
+            text: "La gran version 6",
+            link: "/es6/principal-news",
           },
           {
-            text: 'Desestructuracion',
-            link: '/es6/destructuring'
+            text: "Desestructuracion",
+            link: "/es6/destructuring",
           },
           {
-            text: 'Spread y rest operators',
-            link: '/es6/spread-rest'
+            text: "Spread y rest operators",
+            link: "/es6/spread-rest",
           },
           {
-            text: 'Modulos',
-            link: '/es6/modules'
-          }
-        ]
+            text: "Modulos",
+            link: "/es6/modules",
+          },
+        ],
       },
       {
         text: "DOM",
@@ -212,6 +212,26 @@ export default defineConfig({
           {
             text: "Introducción",
             link: "/dom/introduction",
+          },
+          {
+            text: "Seleccionar elementos",
+            link: "/dom/select-element",
+          },
+          {
+            text: "Crear elementos",
+            link: "/dom/create-element",
+          },
+          {
+            text: "Atributos HTML",
+            link: "/dom/attributes-html",
+          },
+          {
+            text: "Contenido en el DOM",
+            link: "/dom/dom-content",
+          },
+          {
+            text: "Insertar elementos en el DOM",
+            link: "/dom/insert-elements",
           },
         ],
       },
