@@ -272,6 +272,10 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "Proyecto final",
+        link: "final-project",
+      },
     ],
 
     socialLinks: [
