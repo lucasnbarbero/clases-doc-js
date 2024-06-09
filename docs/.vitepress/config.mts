@@ -233,6 +233,14 @@ export default defineConfig({
             text: "Insertar elementos en el DOM",
             link: "/dom/insert-elements",
           },
+          {
+            text: "Eventos del DOM",
+            link: "/dom/events",
+          },
+          {
+            text: "IndexedDB",
+            link: "/dom/indexeddb",
+          },
         ],
       },
       {
