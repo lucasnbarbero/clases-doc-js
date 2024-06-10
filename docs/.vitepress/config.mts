@@ -285,6 +285,10 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "Cierre del curso",
+        link: "course-closing",
+      },
     ],
 
     socialLinks: [
