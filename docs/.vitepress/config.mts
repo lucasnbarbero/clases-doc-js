@@ -273,8 +273,17 @@ export default defineConfig({
         ],
       },
       {
-        text: "Proyecto final",
-        link: "final-project",
+        text: "Proyectos finales",
+        items: [
+          {
+            text: "Reservas para Phoenix",
+            link: "final-project",
+          },
+          {
+            text: "Control de gastos",
+            link: "final-project-2",
+          },
+        ],
       },
     ],
 

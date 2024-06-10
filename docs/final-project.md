@@ -48,4 +48,4 @@ Pueden basarse en el siguiente proyecto de ejemplo que cubre conceptos similares
 
 [Repositorio del Proyecto de Ejemplo](https://github.com/lucasnbarbero/clases-doc-js-practica)
 
-## Solución posible
+
