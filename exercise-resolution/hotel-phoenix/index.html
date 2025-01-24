@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Reservas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    .reservas {
+      margin-top: 20px;
+    }
+    .reserva {
+      background: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Reservas</h1>
+    <form id="registroForm">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Ingrese el nombre" />
+      <span class="error" id="errorNombre"></span>
+
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" placeholder="Ingrese el apellido" />
+      <span class="error" id="errorApellido"></span>
+
+      <label for="telefono">Teléfono</label>
+      <input type="number" id="telefono" placeholder="Ingrese el teléfono" />
+      <span class="error" id="errorTelefono"></span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Ingrese el email" />
+      <span class="error" id="errorEmail"></span>
+
+      <label for="dias">Cantidad de días</label>
+      <input type="number" id="dias" placeholder="Ingrese los días de estadía" />
+      <span class="error" id="errorDias"></span>
+
+      <label for="tipoHabitacion">Tipo de Habitación</label>
+      <select id="tipoHabitacion">
+        <option value="">Seleccione una opción</option>
+        <option value="Individual">Individual - $50</option>
+        <option value="Doble">Doble - $90</option>
+        <option value="Suite">Suite - $150</option>
+      </select>
+      <span class="error" id="errorTipoHabitacion"></span>
+
+      <button type="submit">Registrar Huésped</button>
+    </form>
+
+    <div class="reservas" id="listaReservas">
+      <h2>Reservas Registradas</h2>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('registroForm');
+    const listaReservas = document.getElementById('listaReservas');
+
+    const precios = {
+      Individual: 50,
+      Doble: 90,
+      Suite: 150,
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Obtener valores
+      const nombre = document.getElementById('nombre').value.trim();
+      const apellido = document.getElementById('apellido').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const dias = parseInt(document.getElementById('dias').value.trim());
+      const tipoHabitacion = document.getElementById('tipoHabitacion').value;
+
+      // Limpiar mensajes de error
+      document.querySelectorAll('.error').forEach((el) => (el.textContent = ''));
+
+      // Validaciones
+      let isValid = true;
+
+      if (!nombre) {
+        isValid = false;
+        document.getElementById('errorNombre').textContent = 'El nombre es requerido.';
+      }
+      if (!apellido) {
+        isValid = false;
+        document.getElementById('errorApellido').textContent = 'El apellido es requerido.';
+      }
+      if (!telefono || isNaN(telefono)) {
+        isValid = false;
+        document.getElementById('errorTelefono').textContent = 'El teléfono debe ser un número válido.';
+      }
+      if (!email || !email.includes('@')) {
+        isValid = false;
+        document.getElementById('errorEmail').textContent = 'El email es inválido.';
+      }
+      if (!dias || dias < 1) {
+        isValid = false;
+        document.getElementById('errorDias').textContent = 'La cantidad de días debe ser al menos 1.';
+      }
+      if (!tipoHabitacion) {
+        isValid = false;
+        document.getElementById('errorTipoHabitacion').textContent = 'Debe seleccionar un tipo de habitación.';
+      }
+
+      // Si no es válido, salir
+      if (!isValid) return;
+
+      // Calcular precio final
+      const precioPorNoche = precios[tipoHabitacion];
+      const precioFinal = precioPorNoche * dias;
+
+      // Crear la reserva
+      const reservaDiv = document.createElement('div');
+      reservaDiv.classList.add('reserva');
+      reservaDiv.innerHTML = `
+        <p><strong>Nombre:</strong> ${nombre} ${apellido}</p>
+        <p><strong>Teléfono:</strong> ${telefono}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Días de Estadía:</strong> ${dias}</p>
+        <p><strong>Tipo de Habitación:</strong> ${tipoHabitacion}</p>
+        <p><strong>Precio Final:</strong> $${precioFinal}</p>
+      `;
+
+      // Agregar a la lista de reservas
+      listaReservas.appendChild(reservaDiv);
+
+      // Limpiar formulario
+      form.reset();
+    });
+  </script>
+</body>
+</html>
