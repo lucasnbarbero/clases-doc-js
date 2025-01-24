@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Usuarios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>📋 Lista de Usuarios</h1>
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="search" 
+        placeholder="Escribe un nombre o correo..." 
+        aria-label="Buscar usuarios"
+      />
+    </div>
+    <ul id="userList"></ul>
+    <div id="errorMessage" class="hidden">❌ Error al cargar los usuarios. Intenta nuevamente.</div>
+    <div id="noResultsMessage" class="hidden">🔍 No se encontraron usuarios.</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

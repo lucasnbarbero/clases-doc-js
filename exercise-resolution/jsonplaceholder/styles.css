@@ -1,0 +1,86 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+  margin-bottom: 20px;
+}
+
+/* Campo de búsqueda */
+#search {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#search:focus {
+  border-color: #007bff;
+}
+
+/* Lista de usuarios */
+#userList {
+  list-style: none;
+  padding: 0;
+}
+
+#userList li {
+  background: #f4f4f4;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+}
+
+#userList li span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Mensajes de error y sin resultados */
+.hidden {
+  display: none;
+}
+
+#errorMessage, 
+#noResultsMessage {
+  text-align: center;
+  color: #dc3545;
+  font-weight: bold;
+  margin-top: 20px;
+}
